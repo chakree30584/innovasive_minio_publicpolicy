@@ -44,7 +44,7 @@ foreach ($outputarr as $key => $value) {
 
 foreach ($buckets as $key => $bucket) {
     generatePolicyFile($bucket);
-    $cmd = "./mc policy set-json policytmp/" . $bucket . ".json s3/" . $bucket;
+    $cmd = "./mc anonymous set-json policytmp/" . $bucket . ".json s3/" . $bucket;
     echo $cmd . "\n";
     echo shell_exec($cmd);
 }
